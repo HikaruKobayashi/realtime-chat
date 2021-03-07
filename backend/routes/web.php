@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('chat', 'App\Http\Controllers\ChatController@index');
+Route::get('ajax/chat', 'App\Http\Controllers\Ajax\ChatController@index');
+Route::post('ajax/chat', 'App\Http\Controllers\Ajax\ChatController@create');

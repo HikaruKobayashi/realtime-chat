@@ -11,8 +11,17 @@
     },
     "devDependencies": {
         "axios": "^0.21",
+        "cross-env": "^5.1",
+        "jquery": "^3.2",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
-        "postcss": "^8.1.14"
+        "postcss": "^8.1.14",
+        "vue": "^2.6.11",
+        "vue-loader": "^15.9.6",
+        "vue-template-compiler": "^2.6.11"
+    },
+    "dependencies": {
+        "laravel-echo": "^1.10.0",
+        "pusher-js": "^7.0.3"
     }
 }
