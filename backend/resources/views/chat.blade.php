@@ -1,14 +1,28 @@
 <html>
+  <head>
+    <style>
+      #message {
+        width: 100%;
+      }
+      #message > .inner {
+        width: 1200px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
   <body>
-    <div id="chat">
-      <div v-for="message in messages">
-        <span v-text="message.created_at"></span>：&nbsp;
-        <span v-text="message.body"></span>
+    <section id="message">
+      <div id="chat" class="inner">
+        <div v-for="message in messages">
+          <span v-text="message.created_at"></span>：&nbsp;
+          <span v-text="message.body"></span>
+        </div>
+        <textarea v-model="message"></textarea>
+        <br>
+        <button type="button" @click="send()">送信</button>
       </div>
-      <textarea v-model="message"></textarea>
-      <br>
-      <button type="button" @click="send()">送信</button>
-    </div>
+    </section>
+
     <script src=" {{ mix('js/app.js') }} "></script>
     <script>
       new Vue({
