@@ -22,7 +22,6 @@ class MessageCreated implements ShouldBroadcast
      *
      * @return void
      */
-    // Error↓
     public function __construct(Message $message)
     {
         $this->message = $message;
