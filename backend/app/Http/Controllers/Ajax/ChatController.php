@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 class ChatController extends Controller
 {
   public function index() {
-    return \App\Models\Message::orderBy('id', 'desc')->get();
+    return \App\Models\Message::orderBy('id', 'asc')->get();
   }
   public function create(Request $request) {
     $message = \App\Models\Message::create([
